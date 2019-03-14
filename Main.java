@@ -1,32 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-number();
+        int count=0;
+        int sum=0;
+        for(int i=1; i<=1000; i++){
 
-    }
-
-    public static boolean isPrime(int n){
-        if(n==1){
-            return false;
-        }
-        for(int i=2;i<=(long)Math.sqrt(n);i++){
-            if(n%i==0){
-                return false;
-            }
-
-        }
-        return true;
-    }
-    public static void number(){
-       int count =0;
-        for (int i=10; i<50; i++){
-            if(isPrime(i)){
+            if(i%3==0&&i%5==0){
+               sum= i++;
                 System.out.println(i);
                 count++;
-                if(count==10){
-                    System.out.println("close");
-                    break;
+                }
+            if(count==5){
+                break;
+
             }
-            }
-        }
+        } System.out.println(sum);
     }
 }
